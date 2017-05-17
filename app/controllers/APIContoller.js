@@ -13,9 +13,9 @@ module.exports = function (graph) {
 
 
     graph.extendAccessToken({
-        "access_token":     "EAAb9aCVwiXcBAEWjJg6j298Q0Vue6gvFYODgooSZCIcUOt1Ozy5ulWK9drfBUhO1lHXkhh0z8OqPSvK8bWZC8Wne2EcTx9jSfx5SGHGOveoqSDwidtXT9Rh6L7IV3SCKWpMAdhbJnQCxzskIs5MkecGZBTTFin9q1Inh9rEDwZDZD"
-        , "client_id":      "1967473606822263"
-        , "client_secret":  "01c01f03bf8fa1efb414ba05d435e984"
+        "access_token":     "TOKEN_DO_USUARIO_APOS_LOGAR"
+        , "client_id":      "ID_FACEBOOK"
+        , "client_secret":  "SECRET_FACEBOOK"
     }, function (err, facebookRes) {
 
     });
@@ -24,7 +24,7 @@ module.exports = function (graph) {
     controller.index = function (req, res, next) {
 
         graph.setVersion("2.9");
-        graph.setAccessToken("EAAb9aCVwiXcBAEWjJg6j298Q0Vue6gvFYODgooSZCIcUOt1Ozy5ulWK9drfBUhO1lHXkhh0z8OqPSvK8bWZC8Wne2EcTx9jSfx5SGHGOveoqSDwidtXT9Rh6L7IV3SCKWpMAdhbJnQCxzskIs5MkecGZBTTFin9q1Inh9rEDwZDZD");
+        graph.setAccessToken("TOKEN_DO_USUARIO_APOS_LOGAR");
         // Hometown e education nao funcionou pq nao pedimos na inscrição do app.
         graph.get("me?fields=id,name,picture,email,birthday,hometown,education", function(err, res) {
             console.log(res);
