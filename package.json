@@ -1,0 +1,17 @@
+{
+  "name": "social_server_node",
+  "version": "1.0.0",
+  "description": "Exemplo de servico para redes sociais",
+  "main": "serverls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paulo Sérgio dos Santos Júnior",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "fbgraph": "^1.4.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  }
+}
