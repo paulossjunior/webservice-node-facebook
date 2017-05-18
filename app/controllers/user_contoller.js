@@ -9,18 +9,15 @@ module.exports = function () {
 
     var graph = require('fbgraph');
 
-    controller.index = function (req, res, next) {
-
-        var dados ="";
+    controller.me = function (req, res, next) {
 
         graph.setVersion("2.9");
-        graph.setAccessToken("EAAb9aCVwiXcBAEWjJg6j298Q0Vue6gvFYODgooSZCIcUOt1Ozy5ulWK9drfBUhO1lHXkhh0z8OqPSvK8bWZC8Wne2EcTx9jSfx5SGHGOveoqSDwidtXT9Rh6L7IV3SCKWpMAdhbJnQCxzskIs5MkecGZBTTFin9q1Inh9rEDwZDZD");
+
+        graph.setAccessToken(req.params.access_token);
 
         graph.get("me?fields=id,name,picture,email,birthday,hometown,education", function(err, resX) {
-            dados = resX;
-            res.json(dados);
+            res.json(resX);
         });
-
     };
 
     return controller;

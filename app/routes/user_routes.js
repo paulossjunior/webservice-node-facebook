@@ -6,7 +6,7 @@ var controller = require('../controllers/user_contoller')();
 
 module.exports = function (app) {
 
-    app.get('/', controller.index);
+    app.get('/api/facebook/:access_token', controller.me);
 
 
 }

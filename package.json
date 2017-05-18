@@ -9,9 +9,11 @@
   "author": "Paulo Sérgio dos Santos Júnior",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.2",
     "express-load": "^1.1.15",
     "fbgraph": "^1.4.1",
+    "method-override": "^2.3.8",
     "request": "^2.81.0",
     "request-promise": "^4.2.1"
   }
